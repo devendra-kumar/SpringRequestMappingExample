@@ -6,7 +6,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-
+class Student{
+	private String fname;
+	
+	public void setFname(String fname){
+		this.fname= fname;
+	}
+	public String getFname(){
+		return this.fname;
+	}
+}
 /**
  * Handles requests for the application home page.
  */
@@ -25,6 +34,14 @@ public class HomeController {
 	@ResponseBody
 	public String method1(){
 		return "method1";
+	}
+	
+	@RequestMapping(value="/methodS")
+	@ResponseBody
+	public Student methodS(){
+		Student st = new Student();
+		st.setFname("Devendra");
+		return st;
 	}
 	
 	@RequestMapping(value="/method2", method=RequestMethod.POST)
