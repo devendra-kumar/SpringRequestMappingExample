@@ -17,7 +17,8 @@ public class HomeController {
 	@RequestMapping(value="/method0")
 	@ResponseBody
 	public String method0(){
-		return "method0";		
+		return "method0";
+		
 	}
 	
 	@RequestMapping(value={"/method1","/method1/second"})
