@@ -1,5 +1,4 @@
 package com.journaldev.spring;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,9 +11,10 @@ class Student{
 	public void setFname(String fname){
 		this.fname= fname;
 	}
-	public String getFname(){
-		return this.fname;
+	public String getFname(){			
+		return this.fname;		
 	}
+	
 }
 /**
  * Handles requests for the application home page.
